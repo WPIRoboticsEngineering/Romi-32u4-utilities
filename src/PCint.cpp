@@ -53,6 +53,10 @@ ISR(PCINT0_vect)
     //update last pin states
     lastB = pinsB;                                          
 }
+#else
+
+void attachPCInt(uint8_t pcInt, void (*pcisr)(void)) {}
+
 #endif
 
 uint8_t digitalPinToPCInterrupt(uint8_t pin)
