@@ -55,7 +55,8 @@ ISR(PCINT0_vect)
 }
 #else
 
-void attachPCInt(uint8_t pcInt, void (*pcisr)(void)) {}
+//dummy for other microcontrollers
+void attachPCInt(uint8_t pcInt, void (*pcisr)(void)) { assert(0); } //should never be called
 
 #endif
 
