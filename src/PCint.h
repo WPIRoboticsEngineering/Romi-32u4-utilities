@@ -13,4 +13,4 @@ void attachPCInt(uint8_t pcInt, void (*pcisr)(void));
  * Currently only for ATmega32U4.
  * 
  * */
-uint8_t digitalPinToPCInterrupt(uint8_t pin);
+int8_t digitalPinToPCInterrupt(uint8_t pin);

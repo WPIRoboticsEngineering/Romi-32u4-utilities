@@ -59,9 +59,9 @@ void attachPCInt(uint8_t pcInt, void (*pcisr)(void)) {}
 
 #endif
 
-uint8_t digitalPinToPCInterrupt(uint8_t pin)
+int8_t digitalPinToPCInterrupt(uint8_t pin)
 {
-  uint8_t pcInt = NOT_AN_INTERRUPT;
+  int8_t pcInt = NOT_AN_INTERRUPT;
 
 #if defined(__AVR_ATmega32U4__)
   switch(pin)
