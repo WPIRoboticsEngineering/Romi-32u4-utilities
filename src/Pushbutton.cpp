@@ -23,7 +23,7 @@ PushbuttonStateMachine::PushbuttonStateMachine()
 // transitioned to states 1 or 3.
 bool PushbuttonStateMachine::getSingleDebouncedRisingEdge(bool value)
 {
-  uint16_t timeMillis = millis();
+  uint32_t timeMillis = millis();
 
   switch (state)
   {
@@ -43,7 +43,7 @@ bool PushbuttonStateMachine::getSingleDebouncedRisingEdge(bool value)
       // state.
       state = 0;
     }
-    else if ((uint16_t)(timeMillis - prevTimeMillis) >= 15)
+    else if ( (timeMillis - prevTimeMillis) >= 15 )
     {
       // It has been at least 15 ms and the value is still false, so
       // proceed to the next state.
@@ -66,7 +66,7 @@ bool PushbuttonStateMachine::getSingleDebouncedRisingEdge(bool value)
       // The value is false or bouncing, so go back to previous state.
       state = 2;
     }
-    else if ((uint16_t)(timeMillis - prevTimeMillis) >= 15)
+    else if ((timeMillis - prevTimeMillis) >= 15)
     {
       // It has been at least 15 ms and the value is still true, so
       // go back to the initial state and report this rising edge.

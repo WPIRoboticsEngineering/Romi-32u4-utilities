@@ -53,7 +53,7 @@ public:
 private:
 
   uint8_t state;
-  uint16_t prevTimeMillis;
+  uint32_t prevTimeMillis;
 };
 // \endcond
 

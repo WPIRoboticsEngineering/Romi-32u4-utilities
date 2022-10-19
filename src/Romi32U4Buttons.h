@@ -26,6 +26,7 @@ class Romi32U4ButtonA : public Pushbutton
 public:
     Romi32U4ButtonA() : Pushbutton(ROMI_32U4_BUTTON_A)
     {
+        isPressed();
     }
 };
 
