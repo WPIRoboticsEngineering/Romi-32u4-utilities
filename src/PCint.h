@@ -1,3 +1,5 @@
+#pragma once
+
 #include <Arduino.h>
 
 /** \brief Attaches a function to a pin change interrupt. Currently only for
