@@ -1,4 +1,4 @@
-#include <pcint.h>
+#include <PCint.h>
 
 //define an ISR function pointer; ISRs are of type void fxn(void)
 typedef void(*PCISR)(void); 
